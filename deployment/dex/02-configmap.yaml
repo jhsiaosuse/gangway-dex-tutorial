@@ -2,6 +2,7 @@ kind: ConfigMap
 apiVersion: v1
 metadata:
   name: dex
+  namespace: dex
 data:
   config.yaml: |
     # The base path of dex and the external name of the OpenID Connect service.

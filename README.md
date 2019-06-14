@@ -88,6 +88,12 @@ Generate the secret:
 openssl rand -base64 32
 ```
 
+### Get Kubernetes API server URL
+
+```sh
+kubectl cluster-info | grep 'Kubernetes master' | awk '/http/ {print $NF}'
+```
+
 You will input this secret in gangway and dex's configuration files.
 
 ### Deploy Dex
